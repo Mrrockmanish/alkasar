@@ -1,36 +1,34 @@
 module.exports = {
   theme: {
     screens: {
-      'sm': '576px',
+      'xs': '375px',
+      'sm': '480px',
       'md': '768px',
       'lg': '992px',
       'xl': '1200px',
-      'xxl': '1370px'
+
     },
 
     fontSize: {
-      xs: '0.75rem',
-      sm: '0.875rem',
-      base: '1rem',
-      lg: '1.125rem',
-      xl: '1.25rem',
-      '2xl': '1.5rem',
-      '3xl': '1.875rem',
-      '4xl': '2.25rem',
-      '5xl': '3rem',
-      '6xl': '4rem',
-      '7xl': '4.5rem'
+      xs: '1.2rem',
+      sm: '1.4rem',
+      base: '1.6rem',
+      lg: '1.8rem',
+      xl: '2rem',
+      xl2: '2.2rem',
+      '2xl': '2.4rem',
+      '3xl': '3rem',
+      '4xl': '3.6rem',
+      '5xl': '4.8rem',
+      '6xl': '6.4rem',
+      '7xl': '7.2rem'
     },
 
     colors: {
-      'black': '#000000',
+      'black': '#141414',
       'white': '#FFFFFF',
-      'dark': '#222327',
-      'dark2': '#303030',
-      'light-dark': '#282A2F',
-      'gray': '#747474',
-      'orange': '#FF9700',
-      'yellow': '#F1C600'
+      'blue': '#1B2B47',
+      'light-green': '#D1E332'
     }
 
   },

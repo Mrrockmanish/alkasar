@@ -5,19 +5,33 @@
 @import 'fonts';
 
 
+
+
 $root-font-size: 16;
+
+$black: #141414;
+$white: #FFFFFF;
+$blue: #1B2B47;
+$light-green: #D1E332;
 
 @function s($size) {
     @return $size / $root-font-size * 1rem;
 }
 
-
+:root {
+    font-size: 62.5%;
+}
 
 body {
     color: #fff;
-    font-size: s(17);
-    font-weight: 300;
+    font-size: 1.6rem;
+    font-family: 'Proxima Nova Rg', sans-serif;
+    font-weight: normal;
     word-wrap: break-word;
+
+    @media (min-width: 768px) {
+        font-size: 1.8rem;
+    }
 }
 
 .container {
@@ -43,12 +57,7 @@ a {
     transition: .3s;
 }
 
-.free-content {
-    img {
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-    }
-}
+
 
 section:not(.promo) {
     max-width: 1920px;
@@ -58,19 +67,75 @@ section:not(.promo) {
     overflow: hidden;
 }
 
-.bars {
-    z-index: 99;
-    right: 1rem;
-    top: 1rem;
+.logo {
+    width: 6rem;
+
+    @media (min-width: 480px) {
+        width: 10rem;
+    }
+
+    @media (min-width: 768px) {
+        width: 15rem;
+    }
+
+    @media (min-width: 992px) {
+        width: 24.3rem;
+    }
 }
 
+.main-button {
+    width: 23.7rem;
+    height: 4.5rem;
+    font-size: 2.2rem;
+    color: white;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: .3rem solid $light-green;
+    cursor: pointer;
+    transition: .3s;
 
-.offer {
-    &__title {
-        @media (max-width: 360px) {
-            font-size: 1.75rem;
+    &:hover {
+        color: $black;
+        background-image: linear-gradient(90deg, #D1E332 49400%, #AEB500 81400%)
+    }
+
+
+    &__inner {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.main-nav {
+    margin-left: -2.5rem;
+    margin-right: -2.5rem;
+
+    a {
+        display: block;
+        padding: 1rem 2.5rem;
+        transition: .3s;
+
+        &:hover {
+            color: $light-green;
         }
     }
 }
 
+.bars {
+    width: 3rem;
+    height: 2rem;
 
+    @media (min-width: 480px) {
+        width: 5rem;
+        height: 2rem;
+    }
+
+    svg {
+        width: 100%;
+        height: 100%;
+    }
+}
