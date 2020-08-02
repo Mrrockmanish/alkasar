@@ -7,3 +7,14 @@ $root-font-size: 16;
 @function s($size) {
   @return $size / $root-font-size * 1rem;
 }
+
+.project-slider-arrow {
+  width: 2.7rem;
+  height: 6.2rem;
+  cursor: pointer;
+}
+
+.project-slider-arrows {
+  width: 8.4rem;
+  justify-content: space-between;
+}
