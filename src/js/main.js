@@ -52,3 +52,20 @@ $(document).ready(function () {
 
 
 });
+
+const showMenu = () => {
+  const menu = $('.mobile-menu');
+  menu.removeClass('visuallyhidden').addClass('fadeInRight');
+  $('body').addClass('overflow-hidden');
+};
+
+const hideMenu = () => {
+  const menu = $('.mobile-menu');
+  menu.addClass('visuallyhidden').removeClass('fadeInRight');
+  $('body').removeClass('overflow-hidden')
+}
+
+$('.bars').on('click', showMenu);
+
+$('.mobile-menu__close').on('click', hideMenu);
+$('.mobile-menu a').on('click', hideMenu);
