@@ -568,4 +568,66 @@ h3 {
 
 .footer {
     background-color: #181818;
+
+    &__desc {
+        max-width: 37.7rem;
+        @media (min-width: 768px) {
+            max-width: 51.8rem;
+        }
+    }
+}
+
+.about-item {
+    &__left {
+        width: 26rem;
+
+        @media (min-width: 992px) {
+            width: 50%;
+        }
+
+        @media (min-width: 1220px) {
+            width: 41rem;
+        }
+
+        &-inner {
+            padding-left: 1rem;
+            padding-right: 1rem;
+            border-left: .5rem solid $light-green;
+            border-right: .5rem solid $light-green;
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+            @media (min-width: 1200px) {
+                border-left: 1rem solid $light-green;
+                border-right: 1rem solid $light-green;
+            }
+        }
+    }
+    &__right {
+        width: 100%;
+        @media (min-width: 768px) {
+            width: 52rem;
+        }
+        @media (min-width: 992px) {
+            width: 50%;
+        }
+        @media (min-width: 1220px) {
+            width: 75rem;
+        }
+    }
+}
+
+.max-w {
+    &-40rem {
+        max-width: 40rem;
+    }
+}
+
+.big-phone {
+    font-family: 'Circe', sans-serif;
+    font-weight: 800;
+    font-size: 3.5rem;
+    line-height: 1.5;
+    @media (min-width: 480px) {
+        font-size: 4rem;
+    }
 }
