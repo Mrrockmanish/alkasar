@@ -421,7 +421,7 @@ h3 {
 
 .project-card {
     &__inner {
-        max-width: 38rem;
+        max-width: 460rem;
         margin-left: auto;
         margin-right: auto;
         overflow: hidden;
@@ -432,6 +432,11 @@ h3 {
     &__img {
         img {
             box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+            transition: .3s;
+
+            &:hover {
+                filter: brightness(.8);
+            }
         }
     }
 

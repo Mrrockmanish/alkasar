@@ -3,7 +3,7 @@
 //= templates/head.html
 <body class="relative">
 //= templates/header.html
-<main class="pt-16">
+<main class="pt-12 md:pt-16">
     <div class="container">
         <h2>
             О компании
@@ -82,38 +82,7 @@
         </div>
     </div>
 </main>
-<section class="text-white bg-blue pt-16 pb-20 mt-12 md:mt-16 xl:mt-32">
-    <div class="container">
-        <div class="flex flex-wrap flex-col md:flex-row items-center lg:items-start xl:items-center justify-center -mx-4">
-            <div class="flex justify-center xl:justify-start px-4 w-full xl:w-4/12">
-                <h2 class="title-with-bottom-line title-with-bottom-line_center text-white">
-                    Нужна консультация?
-                </h2>
-            </div>
-            <div class="flex items-end md:items-center justify-center lg:justify-start leading-tight px-4 lg:px-0 text-base md:text-xl2 w-full md:w-8/12 lg:w-7/12 xl:w-5/12 mt-8 md:mt-12 xl:mt-0">
-                <div class="arrow-with-dot flex-shrink-0 hidden sm:inline-flex mr-16 mb-4 md:mb-0">
-                    <span class="dot"></span>
-                </div>
-                <div class="max-w-40rem text-center sm:text-left">
-                    <div>
-                        Вы можете оставить ваш номер телефона и мы вам перезвоним, либо обсудим с вами проект прям сейчас:
-                    </div>
-                    <a href="tel:[[++tel:tel_phone]]" target="_blank" class="big-phone block text-white mt-2">+7 (978) 015-49-49</a>
-                </div>
-            </div>
-            <div class="flex items-center justify-center lg:justify-between px-4 w-full md:w-4/12 lg:w-3/12 mt-8 md:mt-12 xl:mt-0">
-                <form class="inputs-wrap" style="max-width: 23.7rem">
-                    <input type="tel" name="tel" class="input w-full placeholder-black" placeholder="+7 (___) ___ __ __">
-                    <button class="main-button main-button_w-full text-white mt-10">
-                        <span>
-                            Заказать звонок
-                        </span>
-                    </button>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
+//= templates/bottom-form.html
 //= templates/footer.html
 //= templates/scripts.html
 </body>
