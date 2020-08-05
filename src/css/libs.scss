@@ -1,6 +1,7 @@
 // @import '../../bower_components/arcticModal/arcticmodal/jquery.arcticmodal';
 @import "../../node_modules/slick-carousel/slick/slick.scss";
 @import "../../node_modules/slick-carousel/slick/slick-theme.scss";
+@import "../../node_modules/fotorama/fotorama";
 
 $root-font-size: 16;
 
@@ -21,4 +22,8 @@ $root-font-size: 16;
   @media (min-width: 375px) {
     width: 8.4rem;
   }
+}
+
+.fotorama__thumb-border {
+  border-color: #D1E332;
 }

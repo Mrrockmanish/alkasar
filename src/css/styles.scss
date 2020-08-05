@@ -66,10 +66,13 @@ body {
 
 }
 
-.input, button {
+.input, button, textarea {
     outline: none!important;
 
     &:hover {
+        outline: none!important;
+    }
+    &:focus {
         outline: none!important;
     }
 }
@@ -154,6 +157,7 @@ a {
         display: block;
         padding: 1rem 2.5rem;
         transition: .3s;
+        cursor: url(../img/elements/cursor.png) 0 0, pointer;
 
         &:hover {
             color: $light-green;
@@ -359,7 +363,7 @@ h3 {
         @media (min-width: 1220px) {
             left: 1rem;
         }
-        &.active {
+        &.active, &:hover {
             background-image: linear-gradient(to left, $light-green, $light-green 1rem, transparent 1rem, transparent);
             @media (min-width: 1220px) {
                 background-image: linear-gradient(to left, $light-green, $light-green 2rem, transparent 2rem, transparent);
@@ -392,10 +396,22 @@ h3 {
     &__title {
         font-size: 2.4rem;
         border-bottom: 0.2rem solid transparent;
+        position: relative;
+
+        .arrow-with-dot {
+            position: absolute;
+            top: 50%;
+            margin-top: -1.2rem;
+            right: 20%;
+        }
 
         &.active {
             border-bottom: 0.2rem solid $light-green;
             background-image: linear-gradient(to left, $light-green, $light-green 2rem, transparent 2rem, transparent);
+
+            .arrow-with-dot {
+                transform: rotate(45deg) translateY(-1rem);
+            }
         }
         
         @media (min-width: 768px) {
@@ -408,6 +424,10 @@ h3 {
 
         @media (min-width: 768px) {
             display: block!important;
+        }
+
+        &_open {
+            display: block;
         }
     }
 
@@ -467,13 +487,6 @@ h3 {
         border-top: .2rem solid $light-green;
     }
 
-    &__desc-item {
-        font-size: 1.5rem;
-        @media (min-width: 1220px) {
-            font-size: 1.8rem;
-        }
-    }
-
     &__price {
         margin-top: .7rem;
         font-size: 2.8rem;
@@ -484,20 +497,41 @@ h3 {
         display: inline-block;
         margin-top: .3rem;
     }
+}
 
-    &__line {
-        display: inline-flex;
-        flex-grow: 1;
-        height: .1rem;
-        background-color: $light-green;
-        padding-left: .5rem;
-        padding-right: .5rem;
+.desc-item {
+    font-size: 1.5rem;
+
+    @media (min-width: 1220px) {
+        font-size: 1.8rem;
     }
 
     &__value {
-        min-width: 14rem;
-        max-width: 14rem;
+        line-height: 1.1;
         flex-shrink: 0;
+    }
+
+    &__key {
+        width: 23rem;
+        line-height: 1.1;
+        display: flex;
+
+        &_w {
+            &_20 {
+                width: 20rem;
+            }
+        }
+
+        &::after {
+            content: '';
+            display: inline-flex;
+            flex-grow: 1;
+            height: .1rem;
+            min-width: 1rem;
+            background-color: $light-green;
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
     }
 }
 
@@ -518,13 +552,33 @@ h3 {
     width: 4rem;
     height: 4rem;
     position: relative;
-    transform: rotate(-45deg);
+    transform: rotate(-45deg) translateY(0);
+    transition: .3s;
+    transform-origin: center;
 
     .dot {
         right: 0;
         bottom: 1.2rem;
         margin-right: -.5rem;
     }
+
+    &_sm {
+        width: 2.4rem;
+        height: 2.4rem;
+        border-width: .1rem;
+
+        .dot {
+            width: .5rem;
+            height: .5rem;
+            right: 0;
+            bottom: .7rem;
+            margin-right: -.25rem;
+        }
+    }
+}
+
+textarea {
+    color: $black;
 }
 
 .input {
@@ -619,7 +673,7 @@ h3 {
             border-right: .5rem solid $light-green;
             box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 
-            @media (min-width: 1200px) {
+            @media (min-width: 1220px) {
                 border-left: 1rem solid $light-green;
                 border-right: 1rem solid $light-green;
             }
@@ -698,3 +752,55 @@ h3 {
     animation-fill-mode: both;
     animation-timing-function: ease-out;
 }
+
+.gallery {
+    width: 100%;
+    max-width: 62rem;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+    @media (min-width: 992px) {
+        width: 49%;
+    }
+    @media (min-width: 1220px) {
+        width: 62rem;
+    }
+}
+
+.project-properties {
+    max-width: 62rem;
+    box-shadow: 0 3.70732px 3.70732px rgba(0, 0, 0, 0.25);
+    width: 100%;
+
+    @media (min-width: 992px) {
+        width: 49%;
+    }
+    @media (min-width: 1220px) {
+        width: 52rem;
+    }
+}
+
+.project-properties {
+    &__head {
+        width: 100%;
+        padding-top: 2.3rem;
+        padding-bottom: 2rem;
+        border-bottom: .2rem solid $light-green;
+    }
+
+    &__name, &__caption {
+        max-width: 36.7rem;
+    }
+
+    &__caption {
+        font-family: 'Circe', sans-serif;
+        font-size: 2.8rem;
+        font-weight: 800;
+        line-height: 1.46;
+    }
+
+    &__body {
+        width: 100%;
+        max-width: 38rem;
+    }
+}
+
