@@ -69,3 +69,41 @@ $('.bars').on('click', showMenu);
 
 $('.mobile-menu__close').on('click', hideMenu);
 $('.mobile-menu a').on('click', hideMenu);
+
+
+$('.project-floor__img-wrap').magnificPopup({
+  delegate: 'a',
+  type: 'image'
+});
+
+//заказать звонок в шапке
+
+$('.header-call').on('click', function (){
+  $(this).next().show();
+
+  $(document).mouseup(function (e) {
+    const clickObject = $('.header-form-block');
+
+    if (!clickObject.is(e.target) && clickObject.has(e.target).length === 0) {
+      clickObject.hide();
+    }
+  });
+});
+
+$('.header-form-block__close').on('click', function (){
+  $(this).closest('.header-form-block').hide();
+});
+
+$(document).on('af_complete', function (event, response) {
+  const form = response.form;
+  // Если у формы определённый класс
+  if (form.hasClass("header-form") && response.success == true) {
+    // Скрываем её!
+    $('.header-form-block').hide();
+  }
+
+  // Иначе печатаем в консоль весь ответ
+  else {
+    console.log(response);
+  }
+});
