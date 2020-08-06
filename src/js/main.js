@@ -79,7 +79,7 @@ $('.project-floor__img-wrap').magnificPopup({
 //заказать звонок в шапке
 
 $('.header-call').on('click', function (){
-  $(this).next().show();
+  $(this).closest('.header').find('.header-form-block').show();
 
   $(document).mouseup(function (e) {
     const clickObject = $('.header-form-block');

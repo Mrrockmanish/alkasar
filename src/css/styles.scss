@@ -942,7 +942,9 @@ textarea {
     height: 23.6rem;
     width: 30.3rem;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 91;
     right: 0;
+    top: 0;
 
     &__close-wrap {
         margin-top: 1.2rem;
