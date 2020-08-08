@@ -37,6 +37,10 @@ body {
     }
 }
 
+a {
+    cursor: url(../img/elements/cursor.png) 0 0, pointer;
+}
+
 .main, .offer {
     margin-top: 4.6rem;
     @media (min-width: 480px) {
@@ -102,7 +106,7 @@ a {
 }
 
 .logo {
-    width: 6rem;
+    width: 8.5rem;
 
     @media (min-width: 480px) {
         width: 10rem;
@@ -156,7 +160,6 @@ a {
         display: block;
         padding: 1rem 2.5rem;
         transition: .3s;
-        cursor: url(../img/elements/cursor.png) 0 0, pointer;
 
         &:hover {
             color: $light-green;
@@ -405,9 +408,6 @@ h3 {
         }
 
         &.active {
-            border-bottom: 0.2rem solid $light-green;
-            background-image: linear-gradient(to left, $light-green, $light-green 2rem, transparent 2rem, transparent);
-
             .arrow-with-dot {
                 transform: rotate(45deg) translateY(-1rem);
             }
@@ -431,6 +431,10 @@ h3 {
     }
 
     &__inner-content {
+
+        @media (min-width: 768px) {
+            min-height: 46rem;
+        }
 
         p {
             display: flex;
